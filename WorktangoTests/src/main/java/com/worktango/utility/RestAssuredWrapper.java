@@ -12,9 +12,10 @@ import io.restassured.specification.RequestSpecification;
 
 public class RestAssuredWrapper {
 	
-	public <T> T run(String url, Object request, Map<String, Object> queryParam,Map<String, String> headers,Class<T> responseClass, int statusCode){
+	public <T> T run(String url, Object request, Map<String, Object> queryParam,int port, Map<String, String> headers,Class<T> responseClass, int statusCode){
 	    RequestSpecification requestSpec = new RequestSpecBuilder()
 	            .addQueryParams(queryParam)
+	            .setPort(port)
 	            .setBody(request)
 	            .setContentType("application/json")
 	            .addHeaders(headers)

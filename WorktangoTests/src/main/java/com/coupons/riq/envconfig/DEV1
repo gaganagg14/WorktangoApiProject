@@ -1,0 +1,62 @@
+{
+  "partner":[
+    {
+        "retailer": "DGCenter",
+        "banners":[
+          {
+            "banner": "DGCenter",
+            "bannerOmsPid": "19171",
+            "appId" : "f13cecbd-9936-4df1-b522-ce8218673c2b"
+          }
+        ]
+    },
+    {
+      "retailer": "BLHCENTER",
+      "banners":[
+        {
+          "banner": "Bilo",
+          "bannerOmsPid": "19991",
+          "appId" : "3f227550-b063-4c18-80d0-f4ab43f98c09"
+        },
+        {
+          "banner": "Winn-Dixie",
+          "bannerOmsPid": "20021",
+          "appId" : "06c90c5f-e98b-4af2-bd38-79ee1155a629"
+        }
+      ]
+    }, {
+      "retailer": "Safeway",
+      "banners":[
+        {
+          "banner": "swyhouston",
+          "bannerOmsPid": "20991",
+          "appId" : "028e2108-3486-4e21-81a9-f51230713e13"
+        },
+        {
+          "banner": "SWYRIQ",
+          "bannerOmsPid": "21001",
+          "appId" : "fa859f7a-c029-4e43-8de8-1c329aded76a"
+        }
+      ]
+    },
+    {
+      "retailer": "WAGCenter",
+      "banners":[
+        {
+          "banner": "WAGCenter",
+          "bannerOmsPid": "18651",
+          "appId" : "30cbd0ce-9ae4-44dc-a783-1f391942874d, 3a8704a4-24ae-4c50-8f7e-21bb75ccdbeb"
+        }
+      ]
+    },{
+      "retailer": "CouponsAffiliate",
+      "banners":[
+        {
+          "banner": "CouponsAffiliate",
+          "bannerOmsPid": "20931",
+          "appId": "7ccbeddd-1b55-4543-b1ed-cf931a8093f0"
+        }
+      ]
+    }
+  ]
+}

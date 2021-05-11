@@ -1,6 +1,9 @@
 package com.worktango.createSurvey;
 import org.testng.annotations.Test;
 
+import com.coreWrapper.LoggerInfo;
+import com.coupons.riq.config.EnvConfig;
+import com.worktango.common.SystemProperties;
 import com.worktango.dto.AddQuestionWorktangoResponse;
 import com.worktango.dto.CreateSurveyWorktangoResponse;
 import com.worktango.dto.ShowSurveyWorktangoResponse;
@@ -10,7 +13,8 @@ import com.worktango.dto.updateSurvey.WorktangoUpdateSurveyRequest;
 import com.worktango.utility.RestAssuredWrapper;
 import com.worktango.utility.TestConstants;
 
-
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 
 import java.util.HashMap;
@@ -19,6 +23,9 @@ import java.util.Map;
 
 
 public class CreateSurveyApiTests {
+	
+	static Logger logger = LogManager.getLogger(CreateSurveyApiTests.class.getName());
+
 
 	public static int surveyId;
 	public static String surveyName;
@@ -33,6 +40,34 @@ public class CreateSurveyApiTests {
 	CreateSurveyWorktangoResponse createSurveyResponse = new CreateSurveyWorktangoResponse();
 	CreateSurveyWorktangoResponse updateSurveyResponse = new CreateSurveyWorktangoResponse();
 
+	
+	@Test(priority=1, description="Valid")
+	public void testProperties(){	
+
+		System.out.println(SystemProperties.env);
+		logger.info("New order created => " + SystemProperties.env);
+		if(SystemProperties.env.equals("PROD")) {
+			
+		}else {
+			System.out.println(EnvConfig.PAYMENT_SERVICE_PORT);
+
+		}
+
+	}
+	
+	@Test(priority=2, description="Valid")
+	public void testProperties1(){	
+
+		System.out.println(SystemProperties.env);
+		if(SystemProperties.env.equals("PROD")) {
+			
+		}else {
+			System.out.println(EnvConfig.PAYMENT_SERVICE_PORT);
+			Assert.assertEquals(true, false);
+
+		}
+
+	}
 
 	/**
 	 * <pre>
@@ -53,8 +88,8 @@ public class CreateSurveyApiTests {
 	 * @param sTestDesc     TestCase Description
 	 * @throws Exception
 	 */
-
-	@Test(dataProvider = "createSurvey", dataProviderClass = CreateSurveyDataProvider.class, priority=1)
+/*
+	@Test(dataProvider = "createSurvey", dataProviderClass = CreateSurveyDataProvider.class, priority=2)
 	public void createSurvey(String sTestId, String sTestDesc){	
 
 		//Generating random surveyName
@@ -132,7 +167,7 @@ public class CreateSurveyApiTests {
 
 	}
 
-
+*/
 
 
 }
